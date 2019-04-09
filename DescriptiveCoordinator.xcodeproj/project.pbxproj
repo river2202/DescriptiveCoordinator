@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		9120490E225769AE004A5E69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120490D225769AE004A5E69 /* AppDelegate.swift */; };
-		91204910225769AE004A5E69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120490F225769AE004A5E69 /* ViewController.swift */; };
+		91204910225769AE004A5E69 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120490F225769AE004A5E69 /* MainPageViewController.swift */; };
 		91204913225769AE004A5E69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91204911225769AE004A5E69 /* Main.storyboard */; };
 		91204915225769B0004A5E69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91204914225769B0004A5E69 /* Assets.xcassets */; };
 		91204918225769B0004A5E69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91204916225769B0004A5E69 /* LaunchScreen.storyboard */; };
 		91204923225769B0004A5E69 /* DescriptiveCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91204922225769B0004A5E69 /* DescriptiveCoordinatorTests.swift */; };
 		9120492E225769B0004A5E69 /* DescriptiveCoordinatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120492D225769B0004A5E69 /* DescriptiveCoordinatorUITests.swift */; };
+		9120493C225769DE004A5E69 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120493B225769DE004A5E69 /* Coordinator.swift */; };
+		9120493E225769EE004A5E69 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120493D225769EE004A5E69 /* MainCoordinator.swift */; };
+		912049432258872B004A5E69 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912049422258872B004A5E69 /* DetailsViewController.swift */; };
+		912049452258873D004A5E69 /* DateSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912049442258873D004A5E69 /* DateSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		9120490A225769AE004A5E69 /* DescriptiveCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DescriptiveCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9120490D225769AE004A5E69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9120490F225769AE004A5E69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9120490F225769AE004A5E69 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		91204912225769AE004A5E69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91204914225769B0004A5E69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91204917225769B0004A5E69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		91204929225769B0004A5E69 /* DescriptiveCoordinatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DescriptiveCoordinatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9120492D225769B0004A5E69 /* DescriptiveCoordinatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptiveCoordinatorUITests.swift; sourceTree = "<group>"; };
 		9120492F225769B0004A5E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9120493B225769DE004A5E69 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9120493D225769EE004A5E69 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		912049422258872B004A5E69 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		912049442258873D004A5E69 /* DateSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				9120490D225769AE004A5E69 /* AppDelegate.swift */,
-				9120490F225769AE004A5E69 /* ViewController.swift */,
+				9120490F225769AE004A5E69 /* MainPageViewController.swift */,
+				912049422258872B004A5E69 /* DetailsViewController.swift */,
+				912049442258873D004A5E69 /* DateSelectViewController.swift */,
+				9120493B225769DE004A5E69 /* Coordinator.swift */,
+				9120493D225769EE004A5E69 /* MainCoordinator.swift */,
 				91204911225769AE004A5E69 /* Main.storyboard */,
 				91204914225769B0004A5E69 /* Assets.xcassets */,
 				91204916225769B0004A5E69 /* LaunchScreen.storyboard */,
@@ -256,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91204910225769AE004A5E69 /* ViewController.swift in Sources */,
+				91204910225769AE004A5E69 /* MainPageViewController.swift in Sources */,
+				9120493E225769EE004A5E69 /* MainCoordinator.swift in Sources */,
+				912049452258873D004A5E69 /* DateSelectViewController.swift in Sources */,
 				9120490E225769AE004A5E69 /* AppDelegate.swift in Sources */,
+				9120493C225769DE004A5E69 /* Coordinator.swift in Sources */,
+				912049432258872B004A5E69 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
