@@ -20,5 +20,14 @@ class DateSelectViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
   }
+  
+  @IBAction func dateSelected(_ sender: Any) {
+    actionHandler?(.selectDate(Date()))
+  }
+  
+  @IBAction func onBackTapped(_ sender: Any) {
+    actionHandler?(.back)
+  }
+  
 }
 

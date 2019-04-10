@@ -1,5 +1,8 @@
 import UIKit
 
+typealias ActionHandler<T> = (T) -> Void
+typealias ActionHandler2<T, A> = (T, A) -> Void
+
 struct MainCoordinator {
   var startVc: UINavigationController  {
     let rootVc = UINavigationController()
@@ -12,21 +15,33 @@ struct MainCoordinator {
     return MainPageViewController.instanciate { action in
       switch action {
       case .itemClicked:
-        parameters.rootVc.pushViewController(self.detailsViewController(), animated: true)
+        parameters.rootVc.pushViewController(self.detailsViewController(parameters: parameters), animated: true)
       }
     }
   }
   
-  func detailsViewController() -> DetailsViewController {
-    return DetailsViewController.instanciate{ action in
-      
+  func detailsViewController(parameters: (rootVc: UINavigationController, date: Date)) -> DetailsViewController {
+    return DetailsViewController.instanciate{ vc, action in
+      switch action {
+      case .selectDate(let date):
+        parameters.rootVc.pushViewController(self.dateSelectViewController(parameters: (rootVc: parameters.rootVc, detailsViewController: vc, date: date)), animated: true)
+      case .back:
+        parameters.rootVc.popViewController(animated: true)
+      }
     }
   }
   
-//
-//  var router = [
-//    (MainPageViewController, []),
-//
-//  ]
+  func dateSelectViewController(parameters: (rootVc: UINavigationController, detailsViewController: DetailsViewController,date: Date)) -> DateSelectViewController {
+    return DateSelectViewController.instanciate(date: parameters.date){ action in
+      switch action {
+      case .selectDate(let date):
+        parameters.detailsViewController.update(date: date)
+        parameters.rootVc.popViewController(animated: true)
+      case .back:
+        parameters.rootVc.popViewController(animated: true)
+      }
+    }
+  }
+  
 }
 

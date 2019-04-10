@@ -7,9 +7,9 @@ class DetailsViewController: UIViewController {
     case selectDate(Date)
   }
   
-  var actionHandler: ActionHandler<Action>?
+  var actionHandler: ActionHandler2<DetailsViewController, Action>?
   
-  static func instanciate(actionHandler: ActionHandler<Action>? = nil) -> DetailsViewController {
+  static func instanciate(actionHandler: ActionHandler2<DetailsViewController, Action>? = nil) -> DetailsViewController {
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
     vc.actionHandler = actionHandler
     return vc
@@ -17,5 +17,13 @@ class DetailsViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  func update(date: Date) {
+    
+  }
+  
+  @IBAction func selectDateTapped(_ sender: Any) {
+    actionHandler?(self, .selectDate(Date()))
   }
 }

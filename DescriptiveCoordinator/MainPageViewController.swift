@@ -1,8 +1,6 @@
 import UIKit
 
 
-typealias ActionHandler<T> = (T) -> Void
-
 class MainPageViewController: UIViewController {
   
   enum Action {
