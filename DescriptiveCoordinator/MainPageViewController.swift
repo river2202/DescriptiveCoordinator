@@ -43,4 +43,11 @@ extension MainPageViewController: UITableViewDelegate, UITableViewDataSource {
   
 }
 
+//extension MainPageViewController: Coordinateable {
+//    typealias InitParameters = Int
+//    
+//    static func instanciate(_: InitParameters, actionHandler: (MainPageViewController, MainPageViewController.Action) -> Void) -> Self {
+//        return MainPageViewController()
+//    }
+//}
 
